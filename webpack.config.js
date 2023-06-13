@@ -1,5 +1,6 @@
 const path = require ('path')
-const htmlWebpackPlagun=require ('html-webpack-plugin')
+const htmlWebpackPlugin = require ('html-webpack-plugin')
+const CopyPlugin = require("copy-webpack-plugin");
 
 module.exports = {
     mode: 'development',
@@ -10,16 +11,20 @@ module.exports = {
     output:{
         path:path.resolve (__dirname, 'dist'),
         filename:'index.js',
-        clean: true
+        publicPath: '/dist',
     },
 
     devServer: {
-        port:9000,
-        compress:true,
-        hot:true,
+        port: 9000,
+        compress: false,
+        liveReload: true,
+        hot: false,
         static: {
             directory: path.join(__dirname, 'dist')
         }
+    },
+    optimization: {
+        minimize: false,
     },
 
     module: {
@@ -28,27 +33,19 @@ module.exports = {
                 test:/\.scss$/,
                 use: ['style-loader','css-loader','sass-loader']
             },
-           /* {
-                test:/\.(png|svg|jpg|jpeg|gif)$/,
-                use: [
-                    {
-                        loader: 'file-loader',
-                        options: {
-                            name:'[name].[ext]',
-                            outputPath:'./images',
-                            useRelativePath: true
-                        }
-                    }
-                ]
-            }*/
         ]
     },
 
     plugins: [
-        new htmlWebpackPlagun(
+        new CopyPlugin({
+            patterns: [
+                { from: "src/image", to: "image" },
+            ],
+        }),
+        new htmlWebpackPlugin(
             {
-                filename:'index.html',
-                template:'src/index.html'
+                filename:'./index.html',
+                template: path.resolve(__dirname, './src/index.html'),
             }
         )
     ]
