@@ -342,6 +342,21 @@ li:hover a {
     border-color: var(--border-color);
     background-color: #eaeef1;
     padding: 0 5px 0 0;
+
+    .link-baneer{
+      width:200px;
+      height: 70px;
+      background: url(/src/image/baneer-flights.png);
+      background-repeat: no-repeat;
+      background-position: center;
+
+      .link-container{
+        display: block; 
+        text-align: center;
+        height: 100%; 
+        color: #666;
+      }
+    }
   }
 
   h3 {

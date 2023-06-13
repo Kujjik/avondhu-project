@@ -17,12 +17,12 @@ body {
   margin: 0 auto;
   width: 1015px;
   height: 1430px;
-  background-image: url(/image/backgroung-page.png);
+  background-image: url(/src/image/backgroung-page.png);
   background-repeat: no-repeat;
 }
 
 .header {
-  background-image: url(/image/header-logo.gif);
+  background-image: url(/src/image/header-logo.gif);
   background-repeat: no-repeat;
   height: 155px;
 }
@@ -45,11 +45,11 @@ body {
 }
 
 .home:after {
-  content: url(/image/home-icon.jpg);
+  content: url(/src/image/home-icon.jpg);
 }
 
 .mail:after {
-  content: url(/image/mail-icon.jpg);
+  content: url(/src/image/mail-icon.jpg);
 }
 
 .left-header-menu-positions:hover {
@@ -66,7 +66,7 @@ body {
   width: 140px;
   height: 25px;
   padding: 0;
-  background-image: url(/image/background-issue.png);
+  background-image: url(/src/image/background-issue.png);
 }
 .issue-date li {
   padding-top: 2px;
@@ -99,7 +99,7 @@ body {
 .left-navigation-menu {
   width: 170px;
   height: 415px;
-  background-image: url(/image/back-left.gif);
+  background-image: url(/src/image/back-left.gif);
   background-repeat: no-repeat;
   margin: 30px 0 0 20px;
   border-radius: 5px;
@@ -124,7 +124,7 @@ body {
   font-size: var(--size-main-text);
 }
 .left-navigation-menu li:hover::after {
-  content: url(/image/red-arrow.gif);
+  content: url(/src/image/red-arrow.gif);
   position: absolute;
   left: 120px;
   text-decoration: underline;
@@ -232,7 +232,7 @@ body {
   border-radius: 5px;
   border-color: var(--border-color);
   background-color: #bec3ca;
-  background-image: url(/image/main-article.png);
+  background-image: url(/src/image/main-article.png);
   background-repeat: no-repeat;
   background-position-x: 20px;
   background-position-y: 50px;
@@ -308,6 +308,19 @@ body {
   background-color: #eaeef1;
   padding: 0 5px 0 0;
 }
+.right-bar .banner .link-baneer {
+  width: 200px;
+  height: 70px;
+  background: url(/src/image/baneer-flights.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.right-bar .banner .link-baneer .link-container {
+  display: block;
+  text-align: center;
+  height: 100%;
+  color: #666;
+}
 .right-bar h3 {
   margin: 0;
   padding: 10px 0;
@@ -337,7 +350,7 @@ body {
   border-color: var(--border-color);
 }
 .right-bar-articles .first-article-right {
-  background-image: url(/image/ClionaMorrissey.png);
+  background-image: url(/src/image/ClionaMorrissey.png);
   background-position-x: 20px;
   background-position-y: 10px;
   height: 100px;
@@ -347,7 +360,7 @@ body {
   font-size: var(--size-main-text);
 }
 .right-bar-articles .second-atricle-right {
-  background-image: url(/image/news-2.png);
+  background-image: url(/src/image/news-2.png);
   background-position-x: 15px;
   background-position-y: 10px;
   height: 100px;
