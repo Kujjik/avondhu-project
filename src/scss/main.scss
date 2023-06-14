@@ -1,17 +1,17 @@
+$main-text-font: Tahoma;
+$size-main-text: 12px;
+$title-color: #b90d16;
+$border-color: #bec3ca;
+$size-h3-text: 16px;
+$h3-content-title: 14px;
+$footer-color-text: #3d3d3db3;
+$footer-text-size: 11px;
+$text-footer-font: Courier;
+
 body {
   margin: 0 auto;
 }
 
-:root {
-  --main-text-font: Tahoma;
-  --title-color: #b90d16;
-  --border-color: #bec3ca;
-  --size-main-text: 12px;
-  --size-h3-text: 16px;
-  --h3-content-title: 14px;
-  --footer-color-text: #cfd3d5;
-  --footer-text-size: 11px;
-}
 
 .page {
   margin: 0 auto;
@@ -27,18 +27,18 @@ body {
   height: 155px;  
 }
 
-.left-header-menu {
+.left-header-icon {
   display: flex;
   flex-direction: row;
   justify-content: end;
-  padding: 35px 60px 0 0;
-  margin: 0;
+  padding: 35px 60px 5px 0;
+  margin: 10px 0;
   li {
    list-style-type: none;
   }
 }
 
-.left-header-menu-positions {
+.left-header-icon-positions {
   padding: 7px;
   width: 13px;
   height: 18px;
@@ -52,10 +52,6 @@ body {
   content: url(/src/image/mail-icon.jpg);
 }
 
-.left-header-menu-positions:hover {
-  border: solid;
-  border-width: 0.2px;
-}
 
 .issue-date {
   display: flex;
@@ -74,15 +70,15 @@ body {
   }
 
   li:hover {
-    text-decoration: underline var(--title-color);
+    text-decoration: underline $title-color;
   }
   
   a {
-    font-family: var(--main-text-font);
-    font-size: var(--size-main-text);
+    font-family: $main-text-font;
+    font-size: $size-main-text;
     font-weight: bold;
     text-decoration: none;
-    color: var(--title-color);
+    color: $title-color;
   }
 }
 
@@ -125,8 +121,8 @@ li:last-child {
 a {
   text-decoration: none;
   color: #fff;
-  font-family: var(--main-text-font);
-  font-size: var(--size-main-text);
+  font-family: $main-text-font;
+  font-size: $size-main-text;
 }
 
 li:hover::after {
@@ -145,7 +141,7 @@ li:hover::after {
   height: 320px;
   border: solid;
   border-width: 1px;
-  border-color: var(--border-color);
+  border-color: $border-color;
   border-radius: 5px;
 
 h3 {
@@ -153,9 +149,9 @@ h3 {
   justify-content: end;
   margin: 0;
   padding: 24px 41px 5px 0;
-  color: var(--title-color);
-  font-family: var(--main-text-font);
-  font-size: var(--size-h3-text);
+  color: $title-color;
+  font-family: $main-text-font;
+  font-size: $size-h3-text;
 }
 
 ul {
@@ -173,8 +169,8 @@ a {
   margin: 0;
   padding: 5px 41px 5px 0;
   color: #000;
-  font-size: var(--size-main-text);
-  font-family: var(--main-text-font);
+  font-size: $size-main-text;
+  font-family: $main-text-font;
 }
 
 li:hover a {
@@ -190,19 +186,19 @@ li:hover a {
   height: 345px;
   border: solid;
   border-width: 1px;
-  border-color: var(--border-color);
+  border-color: $border-color;
   border-radius: 5px;
   display: flex;
   flex-direction: column;
   align-items: end;
-  font-family: var(--main-text-font);
-  font-size: var(--size-main-text);
+  font-family: $main-text-font;
+  font-size: $size-main-text;
 
 h3 {
-  color: var(--title-color);
+  color: $title-color;
   margin: 0;
   padding: 23px 40px 0px 0;
-  font-size: var(--size-h3-text);
+  font-size: $size-h3-text;
 }
 
 p {
@@ -252,7 +248,7 @@ li:hover a {
   border: solid;
   border-width: 0.2px;
   border-radius: 5px;
-  border-color: var(--border-color);
+  border-color: $border-color;
   background-color: #bec3ca;
   background-image: url(/src/image/main-article.png);
   background-repeat: no-repeat;
@@ -263,9 +259,9 @@ li:hover a {
     display: flex;
     justify-content: center;
     margin: 0 0 10px 0;
-    font-size: var(--h3-content-title);
-    font-family: var(--main-text-font);
-    color: var(--title-color);
+    font-size: $h3-content-title;
+    font-family: $main-text-font;
+    color: $title-color;
   }
 
   p {
@@ -274,8 +270,8 @@ li:hover a {
     display: flex;
     margin-left: 210px;
     padding: 10px;
-    font-family: var(--main-text-font);
-    font-size: var(--size-main-text);
+    font-family: $main-text-font;
+    font-size: $size-main-text;
   }
 }
 
@@ -289,17 +285,17 @@ li:hover a {
   h3 {
     margin: 5px 0;
     padding: 0 10px;
-    font-family: var(--main-text-font);
-    color: var(--title-color);
-    font-size: var(--h3-content-title);
+    font-family: $main-text-font;
+    color: $title-color;
+    font-size: $h3-content-title;
     text-transform: uppercase;
   }
 
   p {
     margin: 7px 0 5px;
     padding: 0 10px;
-    font-family: var(--main-text-font);
-    font-size: var(--size-main-text);
+    font-family: $main-text-font;
+    font-size: $size-main-text;
   }
 
   div {
@@ -308,16 +304,16 @@ li:hover a {
     padding: 3px 0 5px 10px;
 
     a {
-      font-family: var(--main-text-font);
-      color: var(--title-color);
-      font-size: var(--size-main-text);
+      font-family: $main-text-font;
+      color: $title-color;
+      font-size: $size-main-text;
     }
 
     a:before {
       content: ">>";
       font-size: 9px;
       font-weight: bold;
-      font-family: var(--main-text-font);
+      font-family: $main-text-font;
     }
   }
 
@@ -339,7 +335,7 @@ li:hover a {
     border: solid;
     border-width: 0.2px;
     border-radius: 5px;
-    border-color: var(--border-color);
+    border-color: $border-color;
     background-color: #eaeef1;
     padding: 0 5px 0 0;
 
@@ -362,8 +358,8 @@ li:hover a {
   h3 {
     margin: 0;
     padding: 10px 0;
-    font-family: var(--main-text-font);
-    color: var(--title-color);
+    font-family: $main-text-font;
+    color: $title-color;
     font-size: 15px;
     text-decoration: underline 2px;
   }
@@ -379,15 +375,24 @@ li:hover a {
   border: solid;
   border-width: 0.2px;
   border-radius: 5px;
-  border-color: var(--border-color);
+  border-color: $border-color;
   background-color: #eaeef1;
   
 
   .first-news {
     width: 100%;
     border-bottom: double 1px;
-    border-color: var(--border-color);
+    border-color: $border-color;
+  }
 
+  .right-article-link {
+    text-decoration: none;
+    font-family: main-text-font;
+    color:#000;
+  }
+
+  .right-article-link:hover{
+    text-decoration: underline;
   }
   
   .first-article-right {
@@ -397,8 +402,8 @@ li:hover a {
     height: 100px;
     background-repeat: no-repeat;
     padding: 270px 20px 0 20px;
-    font-family: var(--main-text-font);
-    font-size: var(--size-main-text);
+    font-family:$main-text-font;
+    font-size: $size-main-text;
     
   }
   
@@ -409,8 +414,8 @@ li:hover a {
     height: 100px;
     background-repeat: no-repeat;
     padding: 352px 20px 0 20px;
-    font-family: var(--main-text-font);
-    font-size: var(--size-main-text);   
+    font-family: $main-text-font;
+    font-size: $size-main-text;   
   }
 }
 
@@ -418,6 +423,7 @@ li:hover a {
 footer {
   display: flex;
   flex-direction: row;
+  font-family: $main-text-font;
 
 
   .copyright {
@@ -425,9 +431,8 @@ footer {
     width: 260px;
     justify-content: center;
     padding-top: 38px;
-    font-family: var(--main-text-font);
-    font-size: var(--footer-text-size);
-    color: var(--footer-color-text);
+    font-size: $footer-text-size;
+    color: $footer-color-text;
   }
 
   ul {
@@ -438,13 +443,19 @@ footer {
     padding-top: 20px;
     list-style: none;
     justify-content: space-between;
+  }
 
+  li:not(:last-child):after{
+    content: "|";
+    margin-left: 5px;
+    font-size: $footer-text-size;
+    color: $footer-color-text;
   }
 
   a {
     text-decoration: none;
-    font-size: var(--footer-text-size);
-    color: var(--footer-color-text);
+    font-size: $footer-text-size;
+    color:  $footer-color-text;
   }
 
   li:hover a {
