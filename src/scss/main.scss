@@ -7,6 +7,7 @@ $h3-content-title: 14px;
 $footer-color-text: #3d3d3db3;
 $footer-text-size: 11px;
 $text-footer-font: Courier;
+$left-menu-color: #ffffff;
 
 body {
   margin: 0 auto;
@@ -143,6 +144,7 @@ li:hover::after {
   border-width: 1px;
   border-color: $border-color;
   border-radius: 5px;
+  background: $left-menu-color;
 
 h3 {
   display: flex;
@@ -193,6 +195,7 @@ li:hover a {
   align-items: end;
   font-family: $main-text-font;
   font-size: $size-main-text;
+  background: $left-menu-color;
 
 h3 {
   color: $title-color;
@@ -298,7 +301,7 @@ li:hover a {
     font-size: $size-main-text;
   }
 
-  div {
+  div{
 
     margin: 0;
     padding: 3px 0 5px 10px;
@@ -307,17 +310,22 @@ li:hover a {
       font-family: $main-text-font;
       color: $title-color;
       font-size: $size-main-text;
+      font-size: 12px;
+      font-weight: bold;
+      text-decoration: none;
     }
 
-    a:before {
+    span {
+      text-decoration: underline;
+    }
+
+    a:before{
       content: ">>";
-      font-size: 9px;
-      font-weight: bold;
-      font-family: $main-text-font;
+      text-decoration: none;
     }
   }
 
-  div:hover a {
+  div:hover span {
     text-decoration: none;
   }
 
@@ -341,10 +349,7 @@ li:hover a {
 
     .link-baneer{
       width:200px;
-      height: 70px;
-      background: url(/src/image/baneer-flights.png);
-      background-repeat: no-repeat;
-      background-position: center;
+      height: 80px;
 
       .link-container{
         display: block; 
@@ -353,10 +358,21 @@ li:hover a {
         color: #666;
       }
     }
+    .back-flight {
+      background: url(/src/image/baneer-flights.png);
+      background-repeat: no-repeat;
+      margin-left: 33px;
+    }
+    .back-insurence {
+      background: url(/src/image/banner-insurance.png);
+      background-repeat: no-repeat;
+      margin-left: 33px;
+    }
+
   }
 
   h3 {
-    margin: 0;
+    margin: 0 0 0 30px;
     padding: 10px 0;
     font-family: $main-text-font;
     color: $title-color;
@@ -371,7 +387,7 @@ li:hover a {
   align-items: center;
   width: 215px;
   height: 860px;
-  margin: 30px 0 0 10px;
+  margin: 30px 0 0 20px;
   border: solid;
   border-width: 0.2px;
   border-radius: 5px;
@@ -381,7 +397,7 @@ li:hover a {
 
   .first-news {
     width: 100%;
-    border-bottom: double 1px;
+    border-bottom: double 4px;
     border-color: $border-color;
   }
 
